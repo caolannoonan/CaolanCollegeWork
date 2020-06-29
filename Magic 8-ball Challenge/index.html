@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8-ball Challenge</title>
+
+    <script>
+    //console
+    
+    var answers = [ "It is certain", "It is decidedly so", "Without a doubt",
+            "Yes, definitely", "You may rely on it", "As I see it, yes",
+            "Most likely", "Outlook good", "Signs point to yes", "Yes",
+            "Reply hazy, try again", "Ask again later",
+            "Better not tell you now", "Cannot predict now",
+            "Concentrate and ask again", "Don't bet on it",
+            "My reply is no", "My sources say no", "Outlook not so good",
+            "Very doubtful"]
+
+window.onload = function(){
+	document.getElementById('button').onclick = function () {
+		var answer = answers[Math.floor(Math.random() * answers.length)];
+	document.getElementById('randomAnswer').innerHTML = answer;
+	};
+}
+   
+    </script>
+
+    <style type="text/css">
+    	p{
+    		font-family: sans-serif;
+    		font-size: 15px;
+    	}
+    	input{
+    		font-family: sans-serif;
+    		font-size: 15px;
+    	}
+    	button{
+    		font-family: sans-serif;
+    		font-size: 15px;
+    	}
+    	input{
+    		width: 150px;
+    	}
+    </style>
+
+</head>
+<body>
+
+
+	<h1> How can I help you today? </h1>
+
+	<input type="text" placeholder="enter a question"></input>
+
+	<button id="button"> Answer me </button>
+
+	<p id="randomAnswer"></p>
+
+</body>
+</html>
